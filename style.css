@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    height: 100vh;
+    font-family: "Sour Gummy", sans-serif;
+    background-color: #152331;
+    color: #ebe6e6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    height: 100%;
+}
+
+.heading-input {
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+main {
+    margin: auto;
+    margin-top: 4rem;
+    background-color: rgb(34, 45, 71);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 600px;
+}
+
+img {
+    width: 80px;
+    height: 79px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+
+img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.maindetail {
+    display: flex;
+    column-gap: 2rem;
+    margin: auto;
+    justify-content: flex-start;
+    align-items: center
+}
+
+#name {
+    color: white;
+}
+
+#username {
+    display: inline-flex;
+}
+
+#username a {
+    text-decoration: none;
+    color: #9a9adf;
+    font-size: 0.8rem;
+}
+
+#username a:hover {
+    text-decoration: underline;
+}
+
+.location-joined span {
+    color: #a3a0a0;
+    letter-spacing: 1px;
+}
+
+.location-joined {
+    margin-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+}
+
+.location-joined p {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.location-joined p::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: '\f124';
+    font-size: 0.7rem;
+    position: relative;
+    left: -4px;
+}
+
+.card {
+    padding: 1.5rem 2rem;
+    width: 600px;
+    padding-top: 0.5rem;
+}
+
+.listOfRepo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    padding: 0 1rem;
+    align-items: center;
+}
+
+.listOfRepo a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #5555b1;
+    font-size: 0.8rem;
+    padding: 5px 8px;
+    border-radius: 7px;
+}
+
+.listOfRepo a:hover {
+    background-color: hsl(240, 37%, 41%);
+}
+
+li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+}
+
+.info {
+    display: flex;
+    font-size: 0.9rem;
+    justify-content: center;
+    column-gap: 3rem;
+    background-color: #152331;
+    border-radius: 10px;
+    padding: 0.5rem 0;
+    width: 83%;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.repo-list-heading {
+    padding-bottom: 1rem;
+    display: block;
+}
+
+#bio {
+    padding: 1rem 0;
+    font-size: 0.9rem;
+}
+
+strong {
+    margin-right: 5px;
+}
+
+input[type='text'] {
+
+    background-color: transparent;
+    border: 2px solid rgb(191, 190, 190);
+    border-radius: 20px;
+    padding: 10px;
+    transition: padding 0.5s;
+    font-family: inherit;
+    color: #a6a2a2;
+}
+
+input[type='text']:focus {
+    padding: 13px 130px 13px 20px;
+    border: 2px solid rgb(191, 190, 190);
+}
+
+input[type='text']:focus-visible {
+    outline: none;
+
+}
+
+::placeholder {
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+
+.fas {
+
+    position: relative;
+    right: 31px;
+    top: 35%;
+}
+
+.error {
+    margin: 2rem;
+    color: #df6c6c;
+    font-size: 1.5rem;
+}
+
+/* media query */
+/* Mobile Devices (up to 600px) */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .heading-input {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    h1 {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 1rem;
+    }
+
+    .fas {
+        position: static;
+        margin-top: -2rem;
+        margin-bottom: 1rem;
+    }
+
+    main {
+        width: 90%;
+        padding: 1rem;
+        margin-top: 2rem;
+        border-radius: 10px;
+    }
+
+    .maindetail {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #name,
+    #username {
+        text-align: center;
+    }
+
+    .location-joined {
+        margin-left: 0;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .listOfRepo {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* Tablet Devices (601px to 1024px) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .heading-input {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    h1 {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    input[type="text"] {
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 1rem;
+    }
+
+    .fas {
+        position: static;
+        margin-top: -2rem;
+        margin-bottom: 1rem;
+    }
+
+    main {
+        width: 100%;
+        padding: 1rem;
+        margin-top: 2rem;
+        border-radius: 10px;
+    }
+
+    .maindetail {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #name,
+    #username {
+        text-align: center;
+    }
+
+    .location-joined {
+        margin-left: 0;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .listOfRepo {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
