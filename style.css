@@ -230,16 +230,19 @@ input[type='text']:focus-visible {
         width: 100%;
         padding: 10px;
         margin-bottom: 1rem;
+        position: relative;
     }
 
     .fas {
-        position: static;
+        position: absolute;
+        right: 31px;
+        top: 32%;
         margin-top: -2rem;
         margin-bottom: 1rem;
     }
 
     main {
-        width: 90%;
+        width: 95%;
         padding: 1rem;
         margin-top: 2rem;
         border-radius: 10px;
@@ -249,6 +252,11 @@ input[type='text']:focus-visible {
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    .card {
+        padding: 0;
+        width: unset;
     }
 
     #name,
@@ -261,14 +269,19 @@ input[type='text']:focus-visible {
     }
 
     .info {
-        flex-direction: column;
+        /* flex-direction: column; */
         align-items: center;
         width: 100%;
+        padding: 0.5rem 10px;
     }
 
     .listOfRepo {
         justify-content: center;
         width: 100%;
+    }
+
+    .listOfRepo a {
+        font-size: 0.6rem;
     }
 }
 
@@ -335,4 +348,3 @@ input[type='text']:focus-visible {
         width: 100%;
     }
 }
-
